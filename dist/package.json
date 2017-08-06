@@ -1,0 +1,10 @@
+{
+ "name": "portfolio",
+ "version": "1.0.0",
+ "description": "Robert Fikes IV portfolio",
+ "author": "Robert Fikes IV",
+ "private": true,
+ "scripts": {
+   "postinstall": "npm install express"
+ }
+}
