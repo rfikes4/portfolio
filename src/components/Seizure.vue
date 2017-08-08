@@ -7,7 +7,7 @@
 				<div class="subT" ref="subT"></div>
 			</div>
 			<div class="sub-desc">
-				<p>Helmet of Seizure started off as showpiece for Bring Your Own Beamer (BYOB) to make a statement on the 2016 elections and later turned into an experiment on how light can be controlled with movement which was displayed in the NXT STG Gallery</p>
+				<p>Helmet of Seizure started off as showpiece for Bring Your Own Beamer (BYOB) to make a statement on the 2016 political elections and later reimagined as an experiment demonstrating how light can be controlled with movement, displayed in the NXT STG Gallery.</p>
 				<aside>
 					<p>October 2016<br>RedLine & NXT STG<br>Denver, CO</p>
 				</aside>
@@ -26,7 +26,7 @@
 					<h2>Building the Helmet</h2>
 					<div class="subT" ref="subT1"></div>
 				</div>
-				<p class="s-margin">After being inspired by Nordic cultures after studying abroad in Europe, I wanted to create a viking helmet with a slightly demonic feel. The helmet was modeled in Cinema 4d and brought into Pepekura to be folded into a small prototype. The outlines were exported from C4D and projected onto foamcore to be traced, cut, and assembled.</p>
+				<p class="s-margin">Inspired by Nordic cultures after studying abroad in Europe, I wanted to create a Viking helmet with a slightly demonic feel. The helmet was modeled in Cinema 4d and brought into Pepekura to be folded into a small prototype. The outlines were exported from C4D and projected onto foamcore to be traced, cut, and assembled.</p>
 				<div class="s-wrap-img vimeo s2-1"></div>
 				<div class="s-wrap-img vimeo s2-2"></div>
 				<div class="s-wrap-img vimeo s2-3"></div>
@@ -41,7 +41,7 @@
 				<h2>Making it interactive</h2>
 				<div class="subT" ref="subT2"></div>
 			</div>
-			<p class="s-margin">After working on creating the helmet for almost a month, RedLine Contemporary Art Center announced an open call for the 4th annual Bring Your Own Beamer (BYOB). The theme of the event was Democalypse: The collapse of the democracy (more or less) and, in some cases, civility during this election season. After seeing the announcement I wanted to finish the Helmet for this event. Going with the theme of the fall of democracy I decided to create a voting application where people chose which color was better: Red or Blue?<br><br>
+			<p class="s-margin">After working on creating the helmet for nearly a month, RedLine Contemporary Art Center announced an open call for the 4th annual Bring Your Own Beamer (BYOB) event. The theme was Democalypse: The collapse of the democracy (more or less) and, in some cases, civility during this election season. After seeing the announcement I wanted to finish the Helmet for this event. In line with the theme of the fall of democracy, I decided to create a voting application that allowed people to choose which color was best: red or blue.<br><br>
 			The web application on the iPads sends OSC data to a MacBook Pro using Socket.io, Node.js, Express, and P5.js. The MacBook receives the message and sends it to Resolume to control how much of the mask gets covered in red/blue.</p>
 			<div class="s-wrap-img vimeo s2-7"></div>
 			<div class="vimeo">
@@ -56,7 +56,7 @@
 				<h2>Round 2</h2>
 				<div class="subT" ref="subT3"></div>
 			</div>
-			<p class="s-margin">Shortly after debuting at RedLine, the University of Colorado Denver contacted me and asked if I wanted to showcase it at their new NXT STG gallery. I was more than willing, and with a month until the opening I wanted to repurpose the installation to use motion sensing technology. So I bought a Kinect, learned Processing, and made the installation change color and speed depending on where people stood.</p>
+			<p class="s-margin">Shortly after debuting at RedLine, the University of Colorado Denver contacted me and asked if I wanted to showcase the project at their new NXT STG gallery. I was more than willing, and with a month to prepare for the opening I decided to repurpose the installation using motion sensing technology. I purchased a Kinect, learned Processing, and made the installation change color and speed depending on where people stood.</p>
 			<div class="vimeo">
 				<iframe src="https://player.vimeo.com/video/228305686?autoplay=1&loop=1&autopause=0" width="640" height="640" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 			</div>
@@ -70,7 +70,7 @@
 					<h2>Results</h2>
 					<div class="subT" ref="subT4"></div>
 				</div>
-				<p>I really enjoyed working on this project, even though it took months to complete. I learned a lot from how WebSockets work to how much effort it takes to create, setup, and maintain physical installations. People seemed to enjoy playing around with it even though they weren't quite sure what was going on.</p>
+				<p>I thoroughly enjoyed working on this project, even though it took months to complete. I learned a quite a bit about how WebSockets works and how much effort it takes to create, setup, and maintain physical installations. People seemed to enjoy playing around with it even though they weren't quite sure what was going on.</p>
 			</section>
 		</section>
 
@@ -286,8 +286,8 @@
 			},
 			next() {
 				var next = this.$route.path;
-				if (this.$route.path == '/projects/seizure') {
-					this.$router.push('/projects/explosion')
+				if (this.$route.path == '/seizure') {
+					this.$router.push('/explosion')
 				}
 			},
 			over(e) {

@@ -7,7 +7,7 @@
 				<div class="subT" ref="subT"></div>
 			</div>
 			<div class="sub-desc">
-				<p>Urban Lights is a project that brings street art to life at night. Not only does art become animated, but it also becomes interactive allowing anyone to with a smart phone to play with it.</p>
+				<p>Urban Lights is a project that brings street art to life at night. Not only does art become animated, but it also becomes interactive allowing anyone with a smart phone to play with it.</p>
 				<aside>
 					<p>December 2016<br>RiNo Art District<br>Denver, CO</p>
 				</aside>
@@ -24,7 +24,7 @@
 				<h2>Mapping the site</h2>
 				<div class="subT" ref="subT1"></div>
 			</div>
-			<p class="s-margin">The RiNo Art District is known for being Denver’s art scene. Buildings and allyways are covered with murals, and after scouting the area I seleceted the work of Vinne Alfonso (vincealfonso.com). I projected Illustrator on top of the mural and traced out all the feathers in 30 degree weather, taking about a few hours to finish.</p>
+			<p class="s-margin">The RiNo Art District is known for being Denver’s art scene. Buildings and alleyways are covered with murals, and after scouting the area I selected the work of Vinne Alfonso (<a href="www.vincealfonso.com" targer="_blank">vincealfonso.com</a>). I projected Illustrator on top of the mural and traced out all the feathers in 30 degree weather, taking about a few hours to complete.</p>
 			<div class="vimeo">
 				<iframe src="https://player.vimeo.com/video/227681298?autoplay=1&loop=1&autopause=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 			</div>
@@ -36,7 +36,7 @@
 					<h2>Building an interface</h2>
 					<div class="subT" ref="subT2"></div>
 				</div>
-				<p class="s-margin">I built an interface to control the animations with web technologies. The reason being is that I wanted it project to be easily accessible to everyone, after learning that people would prefer to visit a URL rather than download an app for public installations.</p>
+				<p class="s-margin">I built an interface to control the animations with web technologies because I wanted the project to be easily accessible to everyone upon learning that people would prefer to visit a URL rather than download an app for public installations.</p>
 				<div class="vimeo">
 					<iframe src="https://player.vimeo.com/video/227683990?autoplay=1&loop=1&autopause=0" width="640" height="480" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 				</div>
@@ -48,7 +48,7 @@
 				<h2>Making it interactive</h2>
 				<div class="subT" ref="subT3"></div>
 			</div>
-			<p class="s-margin">The Illustrator tracing was exported to .svg and animated with GSAP. I then used a portable wireless router (TP-Link TL-MR3020) and built a node.js server with Socket.io which allowed anyone on the network to connect and control the visuals. From there Syphoner was used to stream the browser to Resolume to be mapped and projected back onto the mural.</p>
+			<p class="s-margin">The Illustrator tracing was exported to .svg and animated with GSAP. I then used a portable wireless router (TP-Link TL-MR3020) and built a node.js server with Socket.io which allowed anyone on the network to connect and control the visuals. Then Syphoner was used to stream the browser to Resolume to be mapped and projected back onto the mural.</p>
 			<div class="vimeo">
 				<iframe src="https://player.vimeo.com/video/227681298?autoplay=1&loop=1&autopause=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 			</div>
@@ -61,7 +61,7 @@
 				<h2>Going live</h2>
 				<div class="subT" ref="subT4"></div>
 			</div>
-			<p class="s-margin">It was rough spending hours each night in 30 degree weather just to get everything up and running. A few people dropped by and asked what I was up to. One person was able to play with the unfinished build and their group all said they would be willing to pay to see this at a festival.</p>
+			<p class="s-margin">It was rough spending hours each night in 30 degree weather getting everything up and running. A few people dropped by and asked what I was up to. One person was able to play with the unfinished build and a group all said they would be willing to pay to see this at a festival.</p>
 			<div class="s-wrap-img vimeo s1-3"></div>
 		</section>
 		
@@ -71,7 +71,7 @@
 					<h2>Results</h2>
 					<div class="subT" ref="subT5"></div>
 				</div>
-				<p>From this project I learned a lot about JavaScript, how to work with a generator, and all the difficulties that come with creating an installation out in public. After sharing the project on Facebook I was amazed that it reached 17,000+ from the RiNo art community sharing it on their pages.</p>
+				<p>From this project I learned a lot about JavaScript, how to work with a generator, and all the difficulties that come with creating an outdoor installation for display and public interaction. After sharing the project on Facebook I was amazed that it reached 17,000+ from the RiNo art community sharing it on their pages.</p>
 			</section>
 		</section>
 
@@ -298,8 +298,8 @@
 			},
 			next() {
 				var next = this.$route.path;
-				if (this.$route.path == '/projects/urban') {
-					this.$router.push('/projects/seizure')
+				if (this.$route.path == '/urban') {
+					this.$router.push('/seizure')
 				}
 			},
 			over(e) {

@@ -26,7 +26,7 @@
 					<h2>The idea</h2>
 					<div class="subT" ref="subT1"></div>
 				</div>
-				<p class="s-margin">After weeks of research and brainstorming we felt that the best solution was with something almost everyone is familiar with, mobile devices. I animated a motion piece that explain's our thesis question.<br><br>The most fun part of the whole project was coming up with ideas for the game. Knowing that we wanted to make a game that uses people's phones to play together with someone VR we figured a tower defense game would best suit the interaction. I created a timeline to help keep us in check, although since we never created anything in Unity before or knew C# we weren't able to accomplish all our goals.</p>
+				<p class="s-margin">After weeks of research and brainstorming we felt that the best solution involved something almost everyone is familiar with: mobile devices. I animated a motion piece that explained our thesis question.<br><br>The most exciting and fun part of the entire project was coming up with ideas for the game. Knowing that we wanted to invent a game that uses people's phones to play together with someone VR, we figured a tower defense game would best suit the interaction. I created a timeline to help keep us in check, although since we never created anything in Unity before or knew C# we weren't able to accomplish all our goals.</p>
 				<div class="s-wrap-img vimeo s5-1"></div>
 				<div class="s-wrap-img vimeo s5-2"></div>
 				<div class="s-wrap-img vimeo s5-3 s-left"></div>
@@ -54,7 +54,7 @@
 				<h2>Moment of truth</h2>
 				<div class="subT" ref="subT3"></div>
 			</div>
-			<p class="s-margin">Towards the last few weeks of our deadline I found out about the Research and Creative Arts Symposium (RaCAS) where students showcased their research and other creative scholarly activites. I thought this was a perfect oppurtunity to get some user testing done and submitted our project, only to push our deadline earlier. After working till 4am the day of presenting we finally finished our game. Abuout 100 students and faculty were able to play and were amazed with what we made.<br><br>After exhibiting at RaCAS we moved our installation to the main event at RedLine where all the other College of Arts and Media students exhibited their thesis.</p>
+			<p class="s-margin">A few weeks before the deadline I was informed about the Research and Creative Arts Symposium (RaCAS) where students showcased their research and other creative scholarly activites. I thought this would be a perfect opportunity to get some user testing done and submitted our project, only to shorten our deadline. After working till 4am the day of presentation we finished our game. Abuout 100 students and faculty were able to play and were amazed with what we had created.<br><br>After exhibiting at RaCAS we moved our installation to the main event at RedLine where all the other College of Arts and Media students exhibited their theses.</p>
 			<div class="s-wrap-img vimeo s5-5"></div>
 			<div class="s-wrap-img vimeo s5-6"></div>
 			<div class="s-wrap-img vimeo s5-7"></div>
@@ -67,7 +67,7 @@
 					<h2>Results</h2>
 					<div class="subT" ref="subT4"></div>
 				</div>
-				<p>This was the most labor intensive projects I've ever worked on mainly because we threw ourselves into something we knew nothing about and set the bar high. We didn't quite finished with the game we imagined but learned how hard and how much time it takes to make a video game. But the reactions from the crowds was the best I've seen and gives me the motivation to continue pushing the boundaries.</p>
+				<p>This was the most labor intensive projects I've ever worked on mainly because we threw ourselves into something we knew almost nothing about and set the bar high. We didn't quite finish the game we imagined but we now realize how hard and how much time it takes to make a video game. Nonetheless, the reactions from the crowds was the best I've experienced and this gives me the motivation to continue pushing the boundaries.</p>
 			</section>
 		</section>
 
@@ -283,8 +283,8 @@
 			},
 			next() {
 				var next = this.$route.path;
-				if (this.$route.path == '/projects/threshold') {
-					this.$router.push('/projects/urban')
+				if (this.$route.path == '/threshold') {
+					this.$router.push('/urban')
 				}
 			},
 			over(e) {

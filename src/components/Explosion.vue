@@ -24,7 +24,7 @@
 				<h2>The Idea</h2>
 				<div class="subT" ref="subT1"></div>
 			</div>
-			<p class="s-margin">After creating visuals for Decadence, I wanted to learn more about the field. This led to me getting introduced to projection mapping so I purchased a projector and started mapping posters I've designed in the past with Resolume. The preset visuals weren't enough, so I created a few more in After Effects and FantaMorph. I really enjoyed playing with the visuals and wanted other people to play around with the illusion of projection mapping. So I purchased APC 40 MKII, learned how to map MIDI signals, submitted my project to the CU Denver Spring 2016 Juried Student Show, and got accepted.</p>
+			<p class="s-margin">Having created visuals for Decadence, I desired to learn more about the field. This led to an introduction to projection mapping. I bought a projector and started mapping posters I had previously designed with Resolume. The preset visuals weren't enough, so I created a few more in After Effects and FantaMorph. I particularly enjoyed manipulating with the visuals and wanted other people to play around with the illusion of projection mapping. I purchased APC 40 MKII, learned how to map MIDI signals, submitted my project to the CU Denver Spring 2016 Juried Student Show, and got accepted.</p>
 			<div class="vimeo">
 				<iframe src="https://player.vimeo.com/video/228331289?autoplay=1&loop=1&autopause=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 			</div>
@@ -38,7 +38,7 @@
 				<h2>Round 2</h2>
 				<div class="subT" ref="subT2"></div>
 			</div>
-			<p class="s-margin">Right after the exhibition I discovered the Denver Creative Tech Meetup and was allowed to show off this creative technology to a more tech-savy audience. The audience at the Meetup interected and asked more questions compared to the audience at the Emmanuel Gallery.</p>
+			<p class="s-margin">Right after the exhibition I discovered the Denver Creative Tech Meetup and was permitted to show off this creative technology to a more tech-savy audience. In contrast to the audience at the Emmanuel Gallery there were more professionals at the Meetup who interacted and asked more involved technical questions.</p>
 			
 			<div class="s-wrap-img vimeo s3-4"></div>
 			<div class="s-wrap-img vimeo s3-5"></div>
@@ -50,7 +50,7 @@
 					<h2>Results</h2>
 					<div class="subT" ref="subT3"></div>
 				</div>
-				<p>This project became very tedious fast, having to put up and take down all 49 sheets of the poster multiple times. The mirror on the projector was destroyed because the projected image was burn onto it after leaving the projector on for 8 hours each day over 2 weeks. But overall I'd say it was worth it because I made a lot of contacts and was featured in the <a href="http://cu-sentry.com/2016/04/13/robert-fikes-iv/" target="_blank">school's paper</a>.</p>
+				<p>This project fast became tedious simply because I had to put up and take down all 49 sheets of the poster multiple times. The mirror on the projector was destroyed because the projected image was burned onto it after leaving the projector on for 8 hours per day for two weeks. But overall I'd say it was worth it because I made numerous contacts and was featured in the school’s newspaper, <a href="http://cu-sentry.com/2016/04/13/robert-fikes-iv/" target="_blank"><i>The Sentry</i></a>.</p>
 			</section>
 		</section>
 
@@ -251,8 +251,8 @@
 			},
 			next() {
 				var next = this.$route.path;
-				if (this.$route.path == '/projects/explosion') {
-					this.$router.push('/projects/decadence')
+				if (this.$route.path == '/explosion') {
+					this.$router.push('/decadence')
 				}
 			},
 			over(e) {

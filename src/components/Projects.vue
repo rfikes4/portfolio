@@ -59,7 +59,7 @@
 			<div @click="sub" class="carousel-cell">
 				<div class="slide-title">
 					<h1>Explosion</h1>
-					<h2>Ineractive Poster</h2>
+					<h2>Interactive Poster</h2>
 				</div>
 				<div class="slide">
 					<img class="s-img s3" src="../assets/images/s3-main.jpg" />
@@ -125,7 +125,7 @@
 			<div @click="sub" class="carousel-cell">
 				<div class="slide-title">
 					<h1>Explosion</h1>
-					<h2>Ineractive Poster</h2>
+					<h2>Interactive Poster</h2>
 				</div>
 				<div class="slide">
 					<img class="s-img s3" src="../assets/images/s3-main.jpg" />
@@ -191,7 +191,7 @@
 			<div @click="sub" class="carousel-cell">
 				<div class="slide-title">
 					<h1>Explosion</h1>
-					<h2>Ineractive Poster</h2>
+					<h2>Interactive Poster</h2>
 				</div>
 				<div class="slide">
 					<img class="s-img s3" src="../assets/images/s3-main.jpg" />
@@ -557,23 +557,23 @@
 				// Route push
 				if ( event.target.tagName == "IMG" ){
 					if (event.target.parentNode.parentNode.classList.contains("link")){
-						this.$router.push('/projects/' + index);
+						this.$router.push('/' + index);
 					}
 				} else if ( event.target.className == "slide-title" ) {
 					if (event.target.parentNode.classList.contains("link")){
-						this.$router.push('/projects/' + index);
+						this.$router.push('/' + index);
 					}
 				} else if ( event.target.tagName == "SPAN" ) {
 					if (event.target.parentNode.parentNode.parentNode.classList.contains("link")){
-						this.$router.push('/projects/' + index);
+						this.$router.push('/' + index);
 					}
 				} else if ( event.target.tagName == "P" ) {
 					if (event.target.parentNode.parentNode.classList.contains("link")){
-						this.$router.push('/projects/' + index);
+						this.$router.push('/' + index);
 					}
 				} else if ( event.target.tagName == "H1" || event.target.tagName == "H2") {
 					if (event.target.parentNode.parentNode.classList.contains("link")){
-						this.$router.push('/projects/' + index);
+						this.$router.push('/' + index);
 					}
 				}
 			},

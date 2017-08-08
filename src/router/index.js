@@ -1,9 +1,8 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Hello from '@/components/Hello'
 
 import Nav from '@/components/Nav'
-import Home from '@/components/Home'
+import About from '@/components/About'
 import Projects from '@/components/Projects'
 import Urban from '@/components/Urban'
 import Seizure from '@/components/Seizure'
@@ -18,38 +17,38 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'Home',
-      component: Home
-    },
-    {
-      path: '/projects',
       name: 'Projects',
       component: Projects
     },
     {
-      path: '/projects/urban',
+      path: '/urban',
       name: 'Urban',
       component: Urban
     },
     {
-      path: '/projects/seizure',
+      path: '/seizure',
       name: 'Seizure',
       component: Seizure
     },
     {
-      path: '/projects/explosion',
+      path: '/explosion',
       name: 'Explosion',
       component: Explosion
     },
     {
-      path: '/projects/decadence',
+      path: '/decadence',
       name: 'Decadence',
       component: Decadence
     },
     {
-      path: '/projects/threshold',
+      path: '/threshold',
       name: 'Threshold',
       component: Threshold
+    },
+    {
+      path: '/about',
+      name: 'About',
+      component: About
     }
   ],
   mode: 'history'

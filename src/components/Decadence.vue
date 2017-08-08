@@ -22,7 +22,7 @@
 				<h2>Creating the loops</h2>
 				<div class="subT" ref="subT1"></div>
 			</div>
-			<p class="s-margin">All of the loops were create in After Effects, except for one which was shot with a GoPro and edited in Premiere. Most of the loops were generated with Trapcode.</p>
+			<p class="s-margin">All of the loops were created in After Effects, except for one which was shot with a GoPro and edited in Premiere. Most of the loops were generated with Trapcode.</p>
 			<div class="s-wrap-img vimeo s4-1"></div>
 			<div class="s-wrap-img vimeo s4-2"></div>
 			<div class="s-wrap-img vimeo s4-3"></div>
@@ -41,7 +41,7 @@
 					<h2>Results</h2>
 					<div class="subT" ref="subT2"></div>
 				</div>
-				<p>The only downside to creating all these loops for the rave was not being able to see them live for I was in CA at the time. Who knows, maybe one day I'll make more visuals a get a change to play it live. As for the loops I've uploaded them all for free <a href="https://drive.google.com/open?id=0B1zFIRczcO3mTVhNR2VjLXp1T1E" target="_blank">here</a>.</p>
+				<p>The only downside to creating all these loops for the rave was not being able to see them live because I was in California at the time. Who knows? Maybe one day I'll make more visuals and get a chance to play it live. As for the loops, I've uploaded them all for free <a href="https://drive.google.com/open?id=0B1zFIRczcO3mTVhNR2VjLXp1T1E" target="_blank">here</a>.</p>
 			</section>
 		</section>
 
@@ -235,8 +235,8 @@
 			},
 			next() {
 				var next = this.$route.path;
-				if (this.$route.path == '/projects/decadence') {
-					this.$router.push('/projects/threshold')
+				if (this.$route.path == '/decadence') {
+					this.$router.push('/threshold')
 				}
 			},
 			over(e) {

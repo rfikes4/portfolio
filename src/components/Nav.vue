@@ -12,13 +12,25 @@
 		<ul class="nav-item-container">
 			<span class="nav-line" ref="navLine">
 				<div class="nav-line-txt-container">
-					<span :class="{ navLineTxtActive: navHoverHome}" class="nav-line-txt ">ABOUT</span>
 					<span :class="{ navLineTxtActive: navHoverProjects}" class="nav-line-txt">PROJECTS</span>
-					<span :class="{ navLineTxtActive: navHoverContact}" class="nav-line-txt">CONTACT</span>
+					<span :class="{ navLineTxtActive: navHoverAbout}" class="nav-line-txt ">ABOUT</span>
+					<!-- <span :class="{ navLineTxtActive: navHoverContact}" class="nav-line-txt">CONTACT</span> -->
 				</div>
 			</span>
-			<li class="nav-item nav-home" ref="navHome">
-				<router-link to="/" exact active-class="navActive" class="nav-link" @mouseenter.native="navHover = '/'" @mouseleave.native="navHover = null">
+			<li class="nav-item nav-projects" ref="navProjects">
+				<router-link to="/" active-class="navActive" class="nav-link" @mouseenter.native="navHover = '/'" @mouseleave.native="navHover = null">
+					<svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+					  	<g id="monitor">
+					    	<path id="computer-1" d="M0,0V19H24V0ZM22,17H2V2H22Zm-6.6,4L18,24H6l2.6-3Z"/>
+					  	</g>
+					  	<g id="screen" class="nav-hover">
+					    	<rect x="3" y="3" width="18" height="13"/>
+					  	</g>
+					</svg>
+				</router-link>
+			</li>
+			<li class="nav-item nav-about" ref="navAbout">
+				<router-link to="/about" exact active-class="navActive" class="nav-link" @mouseenter.native="navHover = '/about'" @mouseleave.native="navHover = null">
 					<svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 213 363">
 						<g id="body">
 						    <path d="M106.5,219.9c31.1,0,56.4-30.7,56.4-68.5S154.6,83,106.5,83s-56.4,30.7-56.4,68.5,25.2,68.5,56.4,68.5Zm0,0" transform="translate(0)"/>
@@ -28,18 +40,6 @@
 						<g id="afro" class="nav-hover">
 						    <path d="M44,157S26.3,76,107,76c78.7,0,62,81,62,81,31.5-.1,76-157-61.5-157C-39,0,12.2,155.7,44,157Z" transform="translate(0)"/>
 						</g>
-					</svg>
-				</router-link>
-			</li>
-			<li class="nav-item nav-projects" ref="navProjects">
-				<router-link to="/projects" active-class="navActive" class="nav-link" @mouseenter.native="navHover = '/projects'" @mouseleave.native="navHover = null">
-					<svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-					  	<g id="monitor">
-					    	<path id="computer-1" d="M0,0V19H24V0ZM22,17H2V2H22Zm-6.6,4L18,24H6l2.6-3Z"/>
-					  	</g>
-					  	<g id="screen" class="nav-hover">
-					    	<rect x="3" y="3" width="18" height="13"/>
-					  	</g>
 					</svg>
 				</router-link>
 			</li>
@@ -75,12 +75,12 @@
 			return {
 				navBg: null,
 				navLogo: null,
-				navHome: null,
-				navHoverHome: null,
+				navAbout: null,
+				navHoverAbout: null,
 				navProjects: null,
 				navHoverProjects: null,
 				//navContact :null,
-				navHoverContact: null,
+				// navHoverContact: null,
 				navLine: null,
 				navHover: null,
 				navActive: null
@@ -90,7 +90,7 @@
 			// Animation setup
 			this.navBg = this.$refs.navBg;
 			this.navLogo = this.$refs.navLogo;
-			this.navHome = this.$refs.navHome;
+			this.navAbout = this.$refs.navAbout;
 			this.navProjects = this.$refs.navProjects;
 			//this.navContact = this.$refs.navContact;
 			this.navLine = this.$refs.navLine;
@@ -147,22 +147,22 @@
 		    },
 		    navHover() {
 		    	if (this.navHover == '/'){
-		    		this.navHoverHome = true;
-		    		this.navHoverProjects = false;
-		    		this.navHoverContact = false;
-					TweenMax.to(this.navLine, .5, { y:  0, ease: Power4.easeInOut });
-				} else if (this.navHover == '/projects'){
-					this.navHoverHome = false;
+		    		this.navHoverAbout = false;
 		    		this.navHoverProjects = true;
-		    		this.navHoverContact = false;
+		    		//this.navHoverContact = false;
+					TweenMax.to(this.navLine, .5, { y:  0, ease: Power4.easeInOut });
+				} else if (this.navHover == '/about'){
+					this.navHoverAbout = true;
+		    		this.navHoverProjects = false;
+		    		//this.navHoverContact = false;
 					TweenMax.to(this.navLine, .5, { y:  60, ease: Power4.easeInOut });
 				// } else if (this.navHover == '/contact'){
-				// 	this.navHoverHome = false;
+				// 	this.navHoverAbout = false;
 		  //   		this.navHoverProjects = false;
 		  //   		this.navHoverContact = true;
 				// 	TweenMax.to(this.navLine, .5, { y:  120, ease: Power4.easeInOut });
 				} else {
-					this.navHoverHome = false;
+					this.navHoverAbout = false;
 		    		this.navHoverProjects = false;
 		    		this.navHoverContact = false;
 					TweenMax.to(this.navLine, .5, { y:  this.navActive, ease: Power4.easeInOut });
@@ -177,7 +177,7 @@
 				if (mq.matches) {
 				    // Window width < 768px
 				    navIn.to(this.navBg, 1, { height: 60, ease: Power4.easeInOut }, "0")
-					navIn.to(this.navHome, 1, { opacity: 1 }, ".7")
+					navIn.to(this.navAbout, 1, { opacity: 1 }, ".7")
 					navIn.to(this.navProjects, 1, { opacity: 1 }, ".9")
 					//navIn.to(this.navContact, 1, { opacity: 1 }, "1.1")
 					navIn.add(this.loaded, "1")
@@ -186,7 +186,7 @@
 				    // Window width > 768px
 				    navIn.to(this.navBg, 1, { width: 60, ease: Power4.easeInOut }, "0")
 					navIn.to(this.navLogo, 1, { opacity: 1 }, ".5")
-					navIn.to(this.navHome, 1, { opacity: 1 }, ".7")
+					navIn.to(this.navAbout, 1, { opacity: 1 }, ".7")
 					navIn.to(this.navProjects, 1, { opacity: 1 }, ".9")
 					//navIn.to(this.navContact, 1, { opacity: 1 }, "1.1")
 					navIn.to(this.navLine, .5, { scaleY: 1 }, "1.1")
@@ -194,10 +194,19 @@
 				}
 			},
 			updateActive() {
-				if (this.$route.path == '/') {
-					this.navActive = 0;
-				} else if (this.$route.path == '/projects' || this.$route.path == '/projects/threshold' || this.$route.path == '/projects/urban' || this.$route.path == '/projects/seizure' || this.$route.path == '/projects/explosion' || this.$route.path == '/projects/decadence') {
+				if (this.$route.path == '/about') {
 					this.navActive = 60;
+					//console.log('asdasd');
+					if(document.getElementsByClassName('nav-link')[0].classList.contains("navActive")){
+						window.setTimeout(() => {
+							document.getElementsByClassName('nav-link')[0].classList.add("navDisable");
+							console.log('asdasd');
+						},1);	
+					}
+					//document.getElementsByClassName('nav-link')[0].classList.add("navDisable");
+				} else if (this.$route.path == '/' || this.$route.path == '/threshold' || this.$route.path == '/urban' || this.$route.path == '/seizure' || this.$route.path == '/explosion' || this.$route.path == '/decadence') {
+					this.navActive = 0;
+					//document.getElementsByClassName('nav-link')[0].classList.remove("navDisable");
 				// } else if (this.$route.path == '/contact') {
 				// 	this.navActive = 120;
 				}
@@ -209,7 +218,7 @@
 			reloadNav() {
 				TweenLite.set(this.navBg, {clearProps:"all"});
 				TweenLite.set(this.navLogo, {clearProps:"all"});
-				TweenLite.set(this.navHome, {clearProps:"all"});
+				TweenLite.set(this.navAbout, {clearProps:"all"});
 				TweenLite.set(this.navProjects, {clearProps:"all"});
 				//TweenLite.set(this.navContact, {clearProps:"all"});
 				TweenLite.set(this.navLine, {clearProps:"all"});
