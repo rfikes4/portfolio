@@ -73,7 +73,7 @@
 								<i class="fa fa-file-text s-icon" aria-hidden="true"></i>
 							</i>
 						</a>
-						<a target="_blank" href="mailto:contact@robertfikesiv.com" ref="s5" class="btn-social">
+						<a target="_blank" href="mailto:robert.fikes@gmail.com" ref="s5" class="btn-social">
 							<i class="fa fa-envelope s-container" aria-hidden="true">
 								<i class="fa fa-envelope s-icon" aria-hidden="true"></i>
 							</i>
