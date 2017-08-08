@@ -157,14 +157,12 @@
 				// return
 			} else {
 				// h1 txt
-				//this.h1text = this.isCell.getElementsByTagName('h1')[0];
 				var h1 = this.h1n.textContent;
 				h1 = h1.split('');
 				this.h1n.innerHTML = "<span>" + h1.join("</span><span>") + "</span>";
 				this.h1ntxt = this.h1n.children;
 
 				// h2 txt
-				//this.h2text = this.isCell.getElementsByTagName('h2')[0];
 				var h2 = this.h2n.textContent;
 				h2 = h2.split('');
 				this.h2n.innerHTML = "<span>" + h2.join("</span><span>") + "</span>";
@@ -243,12 +241,7 @@
 						this.nHeight = document.body.clientHeight;
 						var top = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
 						var y = (this.nHeight - top - this.nView) / this.nView;
-						TweenMax.to(this.nCover, 0, { opacity: y });
-						// Title
-						// var y2 = (this.nHeight - document.body.scrollTop - (this.nView * 2)) / this.nView;
-						// var y3 = (y2 * this.nView) + this.nView;
-						// TweenMax.to(this.tn, 0, { y: y3 });
-						
+						TweenMax.to(this.nCover, 0, { opacity: y });			
 					}
 				}
 

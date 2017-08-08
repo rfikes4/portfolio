@@ -14,7 +14,6 @@
 				<div class="nav-line-txt-container">
 					<span :class="{ navLineTxtActive: navHoverProjects}" class="nav-line-txt">PROJECTS</span>
 					<span :class="{ navLineTxtActive: navHoverAbout}" class="nav-line-txt ">ABOUT</span>
-					<!-- <span :class="{ navLineTxtActive: navHoverContact}" class="nav-line-txt">CONTACT</span> -->
 				</div>
 			</span>
 			<li class="nav-item nav-projects" ref="navProjects">
@@ -43,24 +42,6 @@
 					</svg>
 				</router-link>
 			</li>
-			<!-- <li class="nav-item nav-contact" ref="navContact">
-				<router-link to="/contact" active-class="navActive" class="nav-link" @mouseenter.native="navHover = '/contact'" @mouseleave.native="navHover = null">
-					<svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 34.1">
-						<g id="closed">
-							<polygon points="12 22.9 0 13.1 24 13.1 12 22.9"/>
-							<polygon points="6.6 21 0 15.7 0 28.2 6.6 21"/>
-							<polygon points="17.4 21 24 28.2 24 15.7 17.4 21"/>
-							<polygon points="15.9 22.3 12 25.4 8.1 22.3 0 31.1 24 31.1 15.9 22.3"/>
-						</g>
-						<g id="open">
-							<polygon points="6.6 21 0 15.7 0 28.2 6.6 21"/>
-							<polygon points="17.4 21 24 28.2 24 15.7 17.4 21"/>
-							<polygon points="12 18 0 31.1 24 31.1 12 18"/>
-							<polygon points="24 13.1 12 0 0 13.1 0 13.1 8 19.6 12 15.1 16.1 19.5 24 13.1 24 13.1"/>
-						</g>
-					</svg>
-				</router-link>
-			</li> -->
 		</ul>
 	</div>
 </template>
@@ -79,8 +60,6 @@
 				navHoverAbout: null,
 				navProjects: null,
 				navHoverProjects: null,
-				//navContact :null,
-				// navHoverContact: null,
 				navLine: null,
 				navHover: null,
 				navActive: null
@@ -92,7 +71,6 @@
 			this.navLogo = this.$refs.navLogo;
 			this.navAbout = this.$refs.navAbout;
 			this.navProjects = this.$refs.navProjects;
-			//this.navContact = this.$refs.navContact;
 			this.navLine = this.$refs.navLine;
 
 			// Begin animation
@@ -112,7 +90,6 @@
 				    var displayStyle1 = window.getComputedStyle(elem, null).getPropertyValue("width");
 				    var displayStyle2 = window.getComputedStyle(elem, null).getPropertyValue("height");
 				}
-				//var check = window.getComputedStyle(elem, null).getPropertyValue("display");
 				if (mq.matches) {
 					this.$emit('mobile', true);
 					if (displayStyle1 == "60px"){
@@ -149,18 +126,11 @@
 		    	if (this.navHover == '/'){
 		    		this.navHoverAbout = false;
 		    		this.navHoverProjects = true;
-		    		//this.navHoverContact = false;
 					TweenMax.to(this.navLine, .5, { y:  0, ease: Power4.easeInOut });
 				} else if (this.navHover == '/about'){
 					this.navHoverAbout = true;
 		    		this.navHoverProjects = false;
-		    		//this.navHoverContact = false;
 					TweenMax.to(this.navLine, .5, { y:  60, ease: Power4.easeInOut });
-				// } else if (this.navHover == '/contact'){
-				// 	this.navHoverAbout = false;
-		  //   		this.navHoverProjects = false;
-		  //   		this.navHoverContact = true;
-				// 	TweenMax.to(this.navLine, .5, { y:  120, ease: Power4.easeInOut });
 				} else {
 					this.navHoverAbout = false;
 		    		this.navHoverProjects = false;
@@ -179,7 +149,6 @@
 				    navIn.to(this.navBg, 1, { height: 60, ease: Power4.easeInOut }, "0")
 					navIn.to(this.navAbout, 1, { opacity: 1 }, ".7")
 					navIn.to(this.navProjects, 1, { opacity: 1 }, ".9")
-					//navIn.to(this.navContact, 1, { opacity: 1 }, "1.1")
 					navIn.add(this.loaded, "1")
 				}
 				else {
@@ -188,7 +157,6 @@
 					navIn.to(this.navLogo, 1, { opacity: 1 }, ".5")
 					navIn.to(this.navAbout, 1, { opacity: 1 }, ".7")
 					navIn.to(this.navProjects, 1, { opacity: 1 }, ".9")
-					//navIn.to(this.navContact, 1, { opacity: 1 }, "1.1")
 					navIn.to(this.navLine, .5, { scaleY: 1 }, "1.1")
 					navIn.add(this.loaded, "1")
 				}
@@ -196,19 +164,13 @@
 			updateActive() {
 				if (this.$route.path == '/about') {
 					this.navActive = 60;
-					//console.log('asdasd');
 					if(document.getElementsByClassName('nav-link')[0].classList.contains("navActive")){
 						window.setTimeout(() => {
 							document.getElementsByClassName('nav-link')[0].classList.add("navDisable");
-							console.log('asdasd');
 						},1);	
 					}
-					//document.getElementsByClassName('nav-link')[0].classList.add("navDisable");
 				} else if (this.$route.path == '/' || this.$route.path == '/threshold' || this.$route.path == '/urban' || this.$route.path == '/seizure' || this.$route.path == '/explosion' || this.$route.path == '/decadence') {
 					this.navActive = 0;
-					//document.getElementsByClassName('nav-link')[0].classList.remove("navDisable");
-				// } else if (this.$route.path == '/contact') {
-				// 	this.navActive = 120;
 				}
 				TweenMax.to(this.navLine, .5, { y:  this.navActive, ease: Power4.easeInOut });
 			},
@@ -220,7 +182,6 @@
 				TweenLite.set(this.navLogo, {clearProps:"all"});
 				TweenLite.set(this.navAbout, {clearProps:"all"});
 				TweenLite.set(this.navProjects, {clearProps:"all"});
-				//TweenLite.set(this.navContact, {clearProps:"all"});
 				TweenLite.set(this.navLine, {clearProps:"all"});
 				this.updateActive();
 				this.navIn();

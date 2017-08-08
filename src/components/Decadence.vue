@@ -125,14 +125,12 @@
 				// return
 			} else {
 				// h1 txt
-				//this.h1text = this.isCell.getElementsByTagName('h1')[0];
 				var h1 = this.h1n.textContent;
 				h1 = h1.split('');
 				this.h1n.innerHTML = "<span>" + h1.join("</span><span>") + "</span>";
 				this.h1ntxt = this.h1n.children;
 
 				// h2 txt
-				//this.h2text = this.isCell.getElementsByTagName('h2')[0];
 				var h2 = this.h2n.textContent;
 				h2 = h2.split('');
 				this.h2n.innerHTML = "<span>" + h2.join("</span><span>") + "</span>";

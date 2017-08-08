@@ -82,15 +82,6 @@
 				</div>
 			</div>
 
-			<!-- <div class="btn-projects-container" ref="pbtn" >
-				<router-link class="btn-projects" to="/projects" @mouseenter.native="btnOver" @mouseleave.native="btnLeave">
-					<span class="pt" ref="pt"></span>
-					<span class="pl" ref="pl"></span>
-					<span class="pr" ref="pr"></span>
-					<span class="pb" ref="pb"></span>
-					<span class="btn-txt" ref="ptext">View projects</span>
-				</router-link>
-			</div> -->
 		</div>
 	</section>
 </template>
@@ -121,13 +112,6 @@
 				s3: null,
 				s4: null,
 				s5: null,
-				// pbtn: null,
-				// ptext: null,
-				// ptxt: null,
-				// pt: null,
-				// pl: null,
-				// pr: null,
-				// pb: null,
 				hcon: null,
 				mouseX: 0,
 				mouseY: 0,
@@ -186,14 +170,6 @@
 			this.s4 = this.$refs.s4;
 			this.s5 = this.$refs.s5;
 
-			// Projects
-			// this.pbtn = this.$refs.pbtn;
-			// this.ptext = this.$refs.ptext;
-			// this.pt = this.$refs.pt;
-			// this.pl = this.$refs.pl;
-			// this.pr = this.$refs.pr;
-			// this.pb = this.$refs.pb;
-
 			// Hover
 			this.hcon = this.$refs.hcon;
 
@@ -207,12 +183,6 @@
 				txtH = txtH.split('');
 				this.info.innerHTML = "<span>" + txtH.join("</span><span>") + "</span>";
 				this.itxt = this.info.children;
-
-				// Projects btn txt
-				// var txtP = this.ptext.textContent;
-				// txtP = txtP.split('');
-				// this.ptext.innerHTML = "<span>" + txtP.join("</span><span>") + "</span>";
-				// this.ptxt = this.ptext.children;
 
 				// Italics
 				var mySpans = document.getElementsByTagName('span');
@@ -272,13 +242,6 @@
 					aboutIn.to(this.s3, .5, { opacity: 1 }, ".7")
 					aboutIn.to(this.s4, .5, { opacity: 1 }, ".8")
 					aboutIn.to(this.s5, .5, { opacity: 1 }, ".9")
-					// Projects
-					// aboutIn.to(this.pl, .4, { scaleY: 1 }, ".6")
-					// aboutIn.to(this.pr, .4, { scaleY: 1 }, ".6")
-					// aboutIn.to(this.pt, .4, { scaleX: 1 }, ".6")
-					// aboutIn.to(this.pb, .4, { scaleX: 1 }, ".6")
-					// aboutIn.to(this.ptext, .4, { opacity: 1, ease: Power4.easeInOut }, ".6")
-					// aboutIn.add(this.updateIn)
 				} else {
 					// Logo
 					aboutIn.to(this.r, 1, { strokeDashoffset: 0, ease: Power2.easeInOut }, "0")
@@ -302,24 +265,9 @@
 					aboutIn.to(this.s3, .5, { opacity: 1 }, ".7")
 					aboutIn.to(this.s4, .5, { opacity: 1 }, ".8")
 					aboutIn.to(this.s5, .5, { opacity: 1 }, ".9")
-					// Projects
-					// aboutIn.to(this.pl, .4, { scaleY: 1 }, ".6")
-					// aboutIn.to(this.pr, .4, { scaleY: 1 }, ".6")
-					// aboutIn.to(this.pt, .4, { scaleX: 1 }, ".6")
-					// aboutIn.to(this.pb, .4, { scaleX: 1 }, ".6")
-					// aboutIn.to(this.ptext, .4, { opacity: 1, ease: Power4.easeInOut }, ".6")
-					// aboutIn.add(this.updateIn)
 				}
 				
 			},
-			// updateIn() {
-			// 	this.lineTL.style["transform-origin"] = "left";
-			// 	this.lineTR.style["transform-origin"] = "right";
-			// 	this.lineL.style["transform-origin"] = "bottom";
-			// 	this.lineR.style["transform-origin"] = "bottom";
-			// 	this.lineBL.style["transform-origin"] = "right";
-			// 	this.lineBR.style["transform-origin"] = "left";
-			// },
 			infotxtIn() {
 				var delay = 0.001 // seconds
 				for (var i = 0; i < this.itxt.length; i++) {
@@ -354,12 +302,6 @@
 					aboutOut.to(this.s3, .5, { opacity: 0 }, ".2")
 					aboutOut.to(this.s4, .5, { opacity: 0 }, ".3")
 					aboutOut.to(this.s5, .5, { opacity: 0 }, ".4")
-					// Projects
-					// aboutOut.to(this.pbtn, 1, { opacity: 0, ease: Power4.easeInOut }, "0")
-					// aboutOut.to(this.pl, .3, { scaleY: 0 }, ".4")
-					// aboutOut.to(this.pr, .3, { scaleY: 0 }, ".4")
-					// aboutOut.to(this.pt, .6, { scaleX: 0 }, ".4")
-					// aboutOut.to(this.pb, .6, { scaleX: 0 }, ".4")
 				} else {
 					// Logo
 					aboutOut.to(this.r, 1, { strokeDashoffset: -615, ease: Power2.easeInOut }, ".3")
@@ -383,12 +325,6 @@
 					aboutOut.to(this.s3, .5, { opacity: 0 }, ".2")
 					aboutOut.to(this.s4, .5, { opacity: 0 }, ".3")
 					aboutOut.to(this.s5, .5, { opacity: 0 }, ".4")
-					// Projects
-					// aboutOut.to(this.pbtn, 1, { opacity: 0, ease: Power4.easeInOut }, "0")
-					// aboutOut.to(this.pl, .3, { scaleY: 0 }, ".4")
-					// aboutOut.to(this.pr, .3, { scaleY: 0 }, ".4")
-					// aboutOut.to(this.pt, .6, { scaleX: 0 }, ".4")
-					// aboutOut.to(this.pb, .6, { scaleX: 0 }, ".4")
 				}
 				
 			},
@@ -451,9 +387,6 @@
 				// Set scroll
 				this.scroll = document.body.scrollTop;
 			}
-			// link() {
-			// 	this.$router.push('/projects');
-			// }
 		}
 	}
 </script>
